@@ -44,7 +44,7 @@ class WelcomePage extends StatelessWidget {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 30.0),
               child: Text(
-                'Encontramos tu restaurant favorito cerca a ti',
+                'Encontra tu restaurant favorito cerca a ti',
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w400,
