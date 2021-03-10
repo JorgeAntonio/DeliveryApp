@@ -44,7 +44,7 @@ class LoginPage extends StatelessWidget {
               child: Center(
                 child: Column(
                   children: [
-                    Text("Bienvenido de nuevo",
+                    Text("Bienvenido",
                         style: TextStyle(
                             color: orange,
                             fontWeight: FontWeight.bold,
