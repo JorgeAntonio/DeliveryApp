@@ -41,7 +41,9 @@ class CollectionsPage extends StatelessWidget {
 
 Widget _card(BuildContext context) {
   return GestureDetector(
-    onTap: () {},
+    onTap: () {
+      Navigator.pushNamed(context, 'collections-detail');
+    },
     child: Stack(
       children: [
         ClipRRect(

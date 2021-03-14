@@ -9,6 +9,7 @@ import 'package:first_proyect/src/features/presentation/tabs/tabs_page.dart';
 import 'package:first_proyect/src/features/presentation/search_page/view/searchView.dart';
 import 'package:first_proyect/src/features/presentation/filter_page/View/filter_page.dart';
 import 'package:first_proyect/src/features/presentation/collections_page/View/collections_page.dart';
+import 'package:first_proyect/src/features/presentation/collection_detail_page/View/collection_detail_page.dart';
 
 final routes = <String, WidgetBuilder>{
   'welcome': (BuildContext context) => WelcomePage(),
@@ -19,4 +20,5 @@ final routes = <String, WidgetBuilder>{
   'search': (BuildContext context) => SearchPage(),
   'filter': (BuildContext context) => FilterPage(),
   'collections': (BuildContext context) => CollectionsPage(),
+  'collections-detail': (BuildContext context) => CollectionDetailPage(),
 };
