@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 //COMMONS WIDGET
 import 'package:first_proyect/src/features/presentation/commons_widgets/headers/header_text.dart';
 import 'package:first_proyect/src/features/presentation/commons_widgets/backButtons/back_button.dart';
+import 'package:first_proyect/src/features/presentation/commons_widgets/cards/favourites_card.dart';
 
 class CollectionDetailPage extends StatelessWidget {
   @override
@@ -11,7 +12,7 @@ class CollectionDetailPage extends StatelessWidget {
         slivers: <Widget>[
           SliverAppBar(
             expandedHeight: 230,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.orange,
             flexibleSpace: FlexibleSpaceBar(
               background: Stack(
                 children: [
@@ -54,6 +55,65 @@ class CollectionDetailPage extends StatelessWidget {
                         color: Color.fromRGBO(51, 58, 77, 1.0),
                         fontWeight: FontWeight.w600,
                         fontSize: 17),
+                  ),
+                  Column(
+                    children: [
+                      favouritesCard(
+                        image: NetworkImage(
+                            'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
+                        title: 'Andy & Cindy dinners',
+                        subtitle: '87 Bootford Circle Apt',
+                        review: '4.8',
+                        ratings: '(233 ratings)',
+                        buttonText: 'Delivery',
+                        hasActionButton: true,
+                        isFavourite: true,
+                      ),
+                      favouritesCard(
+                        image: NetworkImage(
+                            'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
+                        title: 'Andy & Cindy dinners',
+                        subtitle: '87 Bootford Circle Apt',
+                        review: '4.8',
+                        ratings: '(233 ratings)',
+                        buttonText: 'Delivery',
+                        hasActionButton: true,
+                        isFavourite: false,
+                      ),
+                      favouritesCard(
+                        image: NetworkImage(
+                            'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
+                        title: 'Andy & Cindy dinners',
+                        subtitle: '87 Bootford Circle Apt',
+                        review: '4.8',
+                        ratings: '(233 ratings)',
+                        buttonText: 'Delivery',
+                        hasActionButton: true,
+                        isFavourite: true,
+                      ),
+                      favouritesCard(
+                        image: NetworkImage(
+                            'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
+                        title: 'Andy & Cindy dinners',
+                        subtitle: '87 Bootford Circle Apt',
+                        review: '4.8',
+                        ratings: '(233 ratings)',
+                        buttonText: 'Delivery',
+                        hasActionButton: true,
+                        isFavourite: false,
+                      ),
+                      favouritesCard(
+                        image: NetworkImage(
+                            'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
+                        title: 'Andy & Cindy dinners',
+                        subtitle: '87 Bootford Circle Apt',
+                        review: '4.8',
+                        ratings: '(233 ratings)',
+                        buttonText: 'Delivery',
+                        hasActionButton: true,
+                        isFavourite: true,
+                      ),
+                    ],
                   )
                 ],
               ),

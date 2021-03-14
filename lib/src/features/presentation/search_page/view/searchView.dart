@@ -4,7 +4,7 @@ import 'package:first_proyect/src/colors/colors.dart';
 //COMMONS WIDGET
 import 'package:first_proyect/src/features/presentation/commons_widgets/headers/header_double.dart';
 import 'package:first_proyect/src/features/presentation/commons_widgets/headers/header_text.dart';
-import 'package:first_proyect/src/features/presentation/commons_widgets/cards/card_vertical.dart';
+import 'package:first_proyect/src/features/presentation/commons_widgets/cards/vertical_card.dart';
 import 'package:first_proyect/src/features/presentation/commons_widgets/cards/populares_card.dart';
 //Swiper
 import 'package:flutter_swiper/flutter_swiper.dart';

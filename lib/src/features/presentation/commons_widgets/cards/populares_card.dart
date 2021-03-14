@@ -7,7 +7,7 @@ Widget popularesCards({
   double marginTop = 0.0,
   double marginRight = 0.0,
   double marginBotton = 0.0,
-  double marginLeft = 10.0,
+  double marginLeft = 3.0,
   ImageProvider<Object> image,
   String title,
   String subtitle,
@@ -37,7 +37,7 @@ Widget popularesCards({
                     width: 80, height: 80, fit: BoxFit.cover, image: image),
               ),
               Container(
-                padding: EdgeInsets.only(left: 20.0),
+                padding: EdgeInsets.only(left: 7.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
