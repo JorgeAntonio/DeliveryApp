@@ -32,7 +32,7 @@ class ExploreTab extends StatelessWidget {
               _headers(context, 'Popular esta semana', 'Mostrar todo'),
               popularesCards(
                   image: NetworkImage(
-                      'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1ab8be12159515.5625825345ad2.jpg'),
+                      'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
                   title: 'Andy & Cindy dinners',
                   subtitle: '87 Bootford Circle Apt',
                   review: '4.8',
@@ -41,7 +41,7 @@ class ExploreTab extends StatelessWidget {
                   hasActionButton: true),
               popularesCards(
                   image: NetworkImage(
-                      'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1ab8be12159515.5625825345ad2.jpg'),
+                      'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
                   title: 'Andy & Cindy dinners',
                   subtitle: '87 Bootford Circle Apt',
                   review: '4.8',
@@ -50,7 +50,7 @@ class ExploreTab extends StatelessWidget {
                   hasActionButton: true),
               popularesCards(
                   image: NetworkImage(
-                      'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1ab8be12159515.5625825345ad2.jpg'),
+                      'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
                   title: 'Andy & Cindy dinners',
                   subtitle: '87 Bootford Circle Apt',
                   review: '4.8',
@@ -123,7 +123,8 @@ Widget _topBar(BuildContext context) {
 
 Widget _sliderCards() {
   return Container(
-    height: 350.0,
+    height: 335.0,
+    margin: EdgeInsets.only(bottom: 10.0),
     child: Swiper(
       itemCount: 4,
       layout: SwiperLayout.DEFAULT,
@@ -139,69 +140,85 @@ Widget _sliderCards() {
 }
 
 Widget _tarjeta(BuildContext context) {
-  return Container(
-    margin: EdgeInsets.all(5.0),
-    child: Column(
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(20),
-          child: Image(
-              width: 210.0,
-              height: 250.0,
-              fit: BoxFit.cover,
-              image: NetworkImage(
-                  'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZHxlbnwwfDF8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')),
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 5.0),
-              child: Text('Panaderia Gissela',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 17.0)),
-            ),
-            Container(
-              alignment: Alignment.centerLeft,
-              child: Text('Av. Abelardo Quiñones, San Juan',
-                  style: TextStyle(
-                      color: gris,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 13.0)),
-            ),
-            Row(
-              children: [
-                Icon(Icons.star, color: amarillo, size: 16),
-                Text('4.8',
+  return GestureDetector(
+    onTap: () {
+      Navigator.pushNamed(context, 'place-detail');
+    },
+    child: Container(
+      margin: EdgeInsets.all(5.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromRGBO(210, 211, 215, 1.0),
+            offset: Offset(1, 5),
+            blurRadius: 10.0,
+          )
+        ],
+      ),
+      child: Column(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Image(
+                width: 210.0,
+                height: 250.0,
+                fit: BoxFit.cover,
+                image: NetworkImage(
+                    'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80')),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 5.0),
+                child: Text('Panaderia Gissela',
                     style: TextStyle(
                         color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 13.0)),
-                Text("(233 ratings)",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 17.0)),
+              ),
+              Container(
+                alignment: Alignment.centerLeft,
+                child: Text('Av. Abelardo Quiñones, San Juan',
                     style: TextStyle(
                         color: gris,
                         fontWeight: FontWeight.w500,
                         fontSize: 13.0)),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 5.0),
-                  width: 80.0,
-                  height: 18.0,
-                  child: RaisedButton(
-                      elevation: 0.5,
-                      shape: StadiumBorder(),
-                      color: orange,
-                      textColor: Colors.white,
-                      onPressed: () {},
-                      child:
-                          Text('Delivery', style: TextStyle(fontSize: 11.0))),
-                )
-              ],
-            )
-          ],
-        )
-      ],
+              ),
+              Row(
+                children: [
+                  Icon(Icons.star, color: amarillo, size: 16),
+                  Text('4.8',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 13.0)),
+                  Text("(233 ratings)",
+                      style: TextStyle(
+                          color: gris,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 13.0)),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 5.0),
+                    width: 80.0,
+                    height: 18.0,
+                    child: RaisedButton(
+                        elevation: 0.5,
+                        shape: StadiumBorder(),
+                        color: orange,
+                        textColor: Colors.white,
+                        onPressed: () {},
+                        child:
+                            Text('Delivery', style: TextStyle(fontSize: 11.0))),
+                  )
+                ],
+              )
+            ],
+          )
+        ],
+      ),
     ),
   );
 }
@@ -253,6 +270,17 @@ Widget _sliderCollections() {
 Widget _tarjetaCollection(BuildContext context) {
   return Container(
     margin: EdgeInsets.all(10.0),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(20),
+      color: Colors.white,
+      boxShadow: [
+        BoxShadow(
+          color: Color.fromRGBO(210, 211, 215, 1.0),
+          offset: Offset(1, 5),
+          blurRadius: 10.0,
+        )
+      ],
+    ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -260,10 +288,10 @@ Widget _tarjetaCollection(BuildContext context) {
           borderRadius: BorderRadius.circular(20.0),
           child: Image(
               width: 250,
-              height: 150,
+              height: 180,
               fit: BoxFit.cover,
               image: NetworkImage(
-                  'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1ab8be12159515.5625825345ad2.jpg')),
+                  'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80')),
         ),
       ],
     ),

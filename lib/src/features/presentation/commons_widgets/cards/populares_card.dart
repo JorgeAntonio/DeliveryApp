@@ -23,8 +23,19 @@ Widget popularesCards({
           //Navigator.pushNamed(context, 'place-detail');
         },
         child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Color.fromRGBO(210, 211, 215, 1.0),
+                offset: Offset(1, 5),
+                blurRadius: 10.0,
+              )
+            ],
+          ),
           margin: EdgeInsets.only(
-              top: marginTop,
+              top: marginTop = 5.0,
               right: marginRight,
               bottom: marginBotton,
               left: marginLeft),
