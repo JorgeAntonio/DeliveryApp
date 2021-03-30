@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 //Tabs
 import 'package:first_proyect/src/features/presentation/tabs/explore_tab/View/explore_tab.dart';
 import 'package:first_proyect/src/features/presentation/tabs/favourite_tab/View/favourite_tab.dart';
-import 'package:first_proyect/src/features/presentation/tabs/my_order_tab/Model/my_order_tab.dart';
+import 'package:first_proyect/src/features/presentation/tabs/my_order_tab/View/my_order_tab.dart';
 import 'package:first_proyect/src/features/presentation/tabs/profile_tab/View/profile_tab.dart';
 
 class TabsPage extends StatefulWidget {
