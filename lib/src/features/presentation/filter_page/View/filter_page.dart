@@ -1,12 +1,12 @@
-import 'package:first_proyect/src/features/presentation/filter_page/View/costumeWidgets/price_filter.dart';
 import 'package:flutter/material.dart';
 //COMMONS WIDGET
 import 'package:first_proyect/src/features/presentation/commons_widgets/headers/header_text.dart';
 //COLORS
 import 'package:first_proyect/src/colors/colors.dart';
-//CUSTOMS WIDGET
-import 'package:first_proyect/src/features/presentation/filter_page/View/costumeWidgets/cuisines_filters.dart';
-import 'package:first_proyect/src/features/presentation/filter_page/View/costumeWidgets/list_tile_checkout.dart';
+//COMPONENTS WIDGET
+import 'package:first_proyect/src/features/presentation/filter_page/View/components/cuisines_filters.dart';
+import 'package:first_proyect/src/features/presentation/filter_page/View/components/list_tile_checkout.dart';
+import 'package:first_proyect/src/features/presentation/filter_page/View/components/price_filter.dart';
 
 class FilterPage extends StatefulWidget {
   FilterPage({Key key}) : super(key: key);

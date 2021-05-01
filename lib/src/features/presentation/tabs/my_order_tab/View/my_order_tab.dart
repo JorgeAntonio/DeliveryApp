@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:first_proyect/src/features/presentation/commons_widgets/buttons/rounded_button.dart';
 import 'package:flutter/material.dart';
 //COLORS
 import 'package:first_proyect/src/colors/colors.dart';
@@ -122,19 +123,14 @@ Widget _cardOrderTopContent() {
                   fontWeight: FontWeight.w500,
                   fontSize: 14.0),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 10.0),
-                width: 110.0,
-                height: 20.0,
-                child: RaisedButton(
-                    elevation: 0.5,
-                    shape: StadiumBorder(),
-                    color: orange,
-                    onPressed: () {},
-                    child: headerText(
-                        texto: 'Delivery Gratis',
-                        fontSize: 11.0,
-                        color: white)),
-              )
+                  margin: EdgeInsets.symmetric(horizontal: 10.0),
+                  width: 110.0,
+                  height: 20.0,
+                  child: createButton(
+                    labelButton: 'Delivery gratis',
+                    buttonColor: orange,
+                    labelFontsize: 11.0,
+                  ))
             ],
           ),
         )
@@ -234,10 +230,12 @@ Widget _bottonCheckout(context) {
     width: double.infinity,
     height: 45.0,
     margin: EdgeInsets.only(top: 10.0),
-    child: RaisedButton(
-      elevation: 0.5,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-      color: orange,
+    child: ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        elevation: 0.5,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        primary: orange,
+      ),
       onPressed: () {},
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -1,3 +1,4 @@
+import 'package:first_proyect/src/features/presentation/commons_widgets/buttons/rounded_button.dart';
 import 'package:flutter/material.dart';
 //COLORS
 import 'package:first_proyect/src/colors/colors.dart';
@@ -20,70 +21,69 @@ class _CuisinesFilterState extends State<CuisinesFilter> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+        Wrap(
+          direction: Axis.horizontal,
+          alignment: WrapAlignment.start,
           children: [
-            _roundedButtonFilter(() {
+            _createButtonFilter(() {
               setState(() {
                 btnAmerican = !btnAmerican;
               });
             }, btnAmerican, 'American'),
-            _roundedButtonFilter(() {
+            _createButtonFilter(() {
               setState(() {
                 btnAsia = !btnAsia;
               });
             }, btnAsia, 'Asia'),
-            _roundedButtonFilter(() {
+            _createButtonFilter(() {
               setState(() {
                 btnSushi = !btnSushi;
               });
             }, btnSushi, 'Sushi'),
-            _roundedButtonFilter(() {
+            _createButtonFilter(() {
               setState(() {
                 btnPizza = !btnPizza;
               });
             }, btnPizza, 'Pizza'),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            _roundedButtonFilter(() {
+            _createButtonFilter(() {
               setState(() {
                 btnFastFood = !btnFastFood;
               });
-            }, btnFastFood, 'Comida rapida'),
-            _roundedButtonFilter(() {
+            }, btnFastFood, 'Fast food'),
+            _createButtonFilter(() {
               setState(() {
                 btnAsia = !btnAsia;
               });
             }, btnAsia, 'Asia'),
-            _roundedButtonFilter(() {
+            _createButtonFilter(() {
               setState(() {
                 btnDinner = !btnDinner;
               });
-            }, btnDinner, 'Desayunos'),
+            }, btnDinner, 'Desayuno'),
           ],
-        )
+        ),
       ],
     );
   }
 }
 
-Widget _roundedButtonFilter(Function func, bool isActive, String labelText) {
-  return RaisedButton(
-    onPressed: func,
-    elevation: 0.5,
-    color: Colors.white,
-    shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(30.0),
-        side: BorderSide(
-          color: isActive ? orange : gris,
-        )),
-    child: Text(
-      labelText,
-      style: TextStyle(color: isActive ? orange : gris),
+Widget _createButtonFilter(Function func, bool isActive, String labelText) {
+  return Container(
+    width: 110,
+    height: 50,
+    margin: EdgeInsets.only(left: 2),
+    child: createButton(
+      labelButton: labelText,
+      labelButtonColor: isActive ? orange : gris,
+      func: func,
+      buttonColor: white,
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30.0),
+          side: BorderSide(
+            color: isActive ? orange : gris,
+          )),
     ),
   );
 }

@@ -1,3 +1,4 @@
+import 'package:first_proyect/src/features/presentation/commons_widgets/buttons/rounded_button.dart';
 import 'package:flutter/material.dart';
 //COLORS
 import 'package:first_proyect/src/colors/colors.dart';
@@ -96,17 +97,10 @@ Widget popularesCards({
                           width: 110.0,
                           height: 18.0,
                           child: hasActionButton
-                              ? RaisedButton(
-                                  elevation: 0.5,
-                                  shape: StadiumBorder(),
-                                  color: orange,
-                                  onPressed: () {},
-                                  child: Text(
-                                    buttonText,
-                                    style: TextStyle(
-                                        fontSize: 11.0, color: Colors.white),
-                                  ),
-                                )
+                              ? createButton(
+                                  buttonColor: orange,
+                                  labelButton: buttonText,
+                                  labelFontsize: 11.0)
                               : Text(''),
                         )
                       ],

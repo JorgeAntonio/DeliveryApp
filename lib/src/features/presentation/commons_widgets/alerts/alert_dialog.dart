@@ -13,8 +13,9 @@ void showAlertDialog(BuildContext context, ImageProvider<Object> imagePath,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0))),
           content: Container(
-            height: 400.0,
+            height: 320.0,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image(
                   image: imagePath,
@@ -22,7 +23,7 @@ void showAlertDialog(BuildContext context, ImageProvider<Object> imagePath,
                   height: 130.0,
                 ),
                 Container(
-                    margin: EdgeInsets.all(15.0),
+                    margin: EdgeInsets.only(top: 15.0),
                     child: headerText(
                         texto: headerTittle,
                         color: primaryColor,

@@ -37,7 +37,7 @@ class WelcomePage extends StatelessWidget {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 50.0),
               child: headerText(
-                  texto: 'Delivery, tu comida favorita a tu puerta',
+                  texto: 'Delivery\ntu comida\nfavorita a tu puerta',
                   color: Colors.white,
                   fontSize: 45.0),
             ),
@@ -51,15 +51,15 @@ class WelcomePage extends StatelessWidget {
                     fontSize: 17.0),
               ),
             ),
-            roundedButton(
+            createButton(
                 labelButton: 'Log In',
-                color: orange,
+                buttonColor: orange,
                 func: () {
                   Navigator.pushNamed(context, 'login');
                 }),
-            roundedButton(
+            createButton(
                 labelButton: 'Ingresar con Facebook',
-                color: fbButtonColor,
+                buttonColor: fbButtonColor,
                 isWithIcon: true,
                 icon: NetworkImage(
                     'https://i.pinimg.com/originals/b1/c0/1d/b1c01d2be1b5c2ab7c76cfc99adfee53.png'),

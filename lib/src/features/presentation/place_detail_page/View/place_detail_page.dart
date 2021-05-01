@@ -26,7 +26,7 @@ class PlaceDetailPage extends StatelessWidget {
         slivers: <Widget>[
           SliverAppBar(
             backgroundColor: orange,
-            expandedHeight: 395,
+            expandedHeight: 320,
             flexibleSpace: FlexibleSpaceBar(
               background: Stack(
                 children: [
@@ -49,7 +49,7 @@ class PlaceDetailPage extends StatelessWidget {
                       _promoButton(),
                       _infoPlace(),
                       _infoPlaceStats(),
-                      _offerBanner()
+                      //_offerBanner()
                     ],
                   )
                 ],
@@ -100,17 +100,11 @@ Widget _promoButton() {
     height: 25,
     child: Row(
       children: [
-        RaisedButton(
-          elevation: 0.5,
-          onPressed: () {},
-          shape: StadiumBorder(),
-          child: headerText(
-            texto: 'Delivery Gratis',
-            color: Colors.white,
-            fontSize: 12.0,
-          ),
-          color: orange,
-        ),
+        /*createButton(
+          labelButton: 'Delivery Gratis',
+          labelFontsize: 12.0,
+          labelButtonColor: orange,
+        )*/
       ],
     ),
   );
@@ -243,7 +237,7 @@ Widget _infoPlaceStats() {
   );
 }
 
-Widget _offerBanner() {
+/*Widget _offerBanner() {
   return Container(
     color: Color.fromRGBO(255, 237, 214, 1.0),
     padding: EdgeInsets.all(20),
@@ -267,23 +261,18 @@ Widget _offerBanner() {
           ],
         ),
         Spacer(),
-        RaisedButton(
-          elevation: 0.5,
+        createButton(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
-          color: orange,
-          onPressed: () {},
-          child: headerText(
-            texto: 'Order Now',
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 13.0,
-          ),
-        ),
+          buttonColor: orange,
+          labelButton: 'Ordenar ahora',
+          labelFontsize: 13,
+        )
       ],
     ),
   );
 }
+*/
 
 Widget _headers({texto: String}) {
   return Container(

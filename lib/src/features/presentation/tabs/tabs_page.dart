@@ -71,7 +71,9 @@ class _TabsPageState extends State<TabsPage> {
             'https://toppng.com/uploads/preview/google-map-pin-icon-google-maps-icon-orange-11553459497uwtffdmg4t.png'),
         'Activar Ubicación',
         'Por favor active su ubicación para mostrarle los restaurantes de su cercanía',
-        roundedButton(
-            color: orange, labelButton: 'Activar Ubicación', func: () {}));
+        createButton(
+            buttonColor: orange,
+            labelButton: 'Activar Ubicación',
+            func: () {}));
   }
 }

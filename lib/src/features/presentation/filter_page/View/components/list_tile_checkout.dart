@@ -4,10 +4,11 @@ import 'package:first_proyect/src/colors/colors.dart';
 //COMMONS WIDGETS
 import 'package:first_proyect/src/features/presentation/commons_widgets/headers/header_text.dart';
 
+@immutable
 class ListTileCheck extends StatefulWidget {
-  String texto;
-  bool isActive;
-  Function func;
+  final String texto;
+  final bool isActive;
+  final Function func;
 
   ListTileCheck({Key key, this.texto, this.isActive, this.func})
       : super(key: key);

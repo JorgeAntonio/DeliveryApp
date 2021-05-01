@@ -1,3 +1,4 @@
+import 'package:first_proyect/src/features/presentation/commons_widgets/buttons/rounded_button.dart';
 import 'package:first_proyect/src/features/presentation/commons_widgets/cards/populares_card.dart';
 import 'package:flutter/material.dart';
 //Colors
@@ -201,18 +202,14 @@ Widget _tarjeta(BuildContext context) {
                           fontWeight: FontWeight.w500,
                           fontSize: 13.0)),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
-                    width: 80.0,
-                    height: 18.0,
-                    child: RaisedButton(
-                        elevation: 0.5,
-                        shape: StadiumBorder(),
-                        color: orange,
-                        textColor: Colors.white,
-                        onPressed: () {},
-                        child:
-                            Text('Delivery', style: TextStyle(fontSize: 11.0))),
-                  )
+                      margin: EdgeInsets.symmetric(horizontal: 5.0),
+                      width: 80.0,
+                      height: 18.0,
+                      child: createButton(
+                        buttonColor: orange,
+                        labelButton: 'Delyvery',
+                        labelFontsize: 11.0,
+                      ))
                 ],
               )
             ],

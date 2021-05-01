@@ -1,14 +1,20 @@
 //MATERIAL
+import 'package:first_proyect/src/features/presentation/commons_widgets/headers/header_text.dart';
 import 'package:flutter/material.dart';
 
-Widget roundedButton(
+const shape = StadiumBorder();
+
+Widget createButton(
     {BuildContext context,
     double width = 350.0,
     double height = 45.0,
     double radius = 20.0,
     bool isWithIcon = false,
     ImageProvider<Object> icon,
-    Color color,
+    Color labelButtonColor = Colors.white,
+    double labelFontsize = 15.0,
+    Color buttonColor,
+    OutlinedBorder shape = shape,
     Function func,
     String labelButton}) {
   return Container(
@@ -16,17 +22,29 @@ Widget roundedButton(
     height: height,
     margin: EdgeInsets.only(top: 20.0),
     child: isWithIcon
-        ? _raisedButtonWithIcon(radius, icon, labelButton, color, func)
-        : _raisedButtonNoIcon(radius, labelButton, color, func),
+        ? _raisedButtonWithIcon(radius, icon, labelButton, labelButtonColor,
+            labelFontsize, buttonColor, shape, func)
+        : _raisedButtonNoIcon(radius, labelButton, labelButtonColor,
+            labelFontsize, buttonColor, shape, func),
   );
 }
 
-Widget _raisedButtonWithIcon(double radius, ImageProvider<Object> icon,
-    String labelButton, Color color, Function func) {
-  return RaisedButton(
+Widget _raisedButtonWithIcon(
+    double radius,
+    ImageProvider<Object> icon,
+    String labelButton,
+    Color labelButtonColor,
+    double labelFontsize,
+    Color color,
+    OutlinedBorder shape,
+    Function func) {
+  return ElevatedButton(
     onPressed: func,
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(radius)),
-    color: color,
+    style: ElevatedButton.styleFrom(
+      shape: shape,
+      primary: color,
+      elevation: 0.5,
+    ),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -37,9 +55,11 @@ Widget _raisedButtonWithIcon(double radius, ImageProvider<Object> icon,
         ),
         Container(
           margin: EdgeInsets.only(left: 10.0),
-          child: Text(
-            labelButton,
-            style: TextStyle(color: Colors.white, fontSize: 15.0),
+          child: headerText(
+            texto: labelButton,
+            color: labelButtonColor,
+            fontSize: labelFontsize,
+            fontWeight: FontWeight.bold,
           ),
         )
       ],
@@ -48,19 +68,31 @@ Widget _raisedButtonWithIcon(double radius, ImageProvider<Object> icon,
 }
 
 Widget _raisedButtonNoIcon(
-    double radius, String labelButton, Color color, Function func) {
-  return RaisedButton(
+  double radius,
+  String labelButton,
+  Color labelButtonColor,
+  double labelFontsize,
+  Color color,
+  OutlinedBorder shape,
+  Function func,
+) {
+  return ElevatedButton(
     onPressed: func,
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(radius)),
-    color: color,
+    style: ElevatedButton.styleFrom(
+      shape: shape,
+      primary: color,
+      elevation: 0.5,
+    ),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
           margin: EdgeInsets.only(left: 10.0),
-          child: Text(
-            labelButton,
-            style: TextStyle(color: Colors.white, fontSize: 15.0),
+          child: headerText(
+            texto: labelButton,
+            color: labelButtonColor,
+            fontSize: labelFontsize,
+            fontWeight: FontWeight.bold,
           ),
         )
       ],

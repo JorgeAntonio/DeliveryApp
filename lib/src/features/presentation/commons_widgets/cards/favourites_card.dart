@@ -94,20 +94,16 @@ Widget favouritesCard({
                       color: gris,
                       fontWeight: FontWeight.w500,
                       fontSize: 13.0),
-                  Container(
+                  /*Container(
                     margin: EdgeInsets.only(left: 25.0),
                     width: 83.0,
                     height: 18.0,
-                    child: RaisedButton(
-                        onPressed: () {},
-                        elevation: 0.5,
-                        shape: StadiumBorder(),
-                        color: orange,
-                        child: headerText(
-                            texto: buttonText,
-                            fontSize: 11.0,
-                            color: Colors.white)),
-                  ),
+                    child: createButton(
+                      buttonColor: orange,
+                      labelButton: buttonText,
+                      labelFontsize: 11.0,
+                    ),
+                  ),*/
                 ],
               )
             ],
