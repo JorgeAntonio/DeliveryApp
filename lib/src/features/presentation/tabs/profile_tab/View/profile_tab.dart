@@ -17,7 +17,10 @@ class _ProfileTabState extends State<ProfileTab> {
     return Scaffold(
       body: Column(
         children: [
-          _header(),
+          GestureDetector(
+            onTap: () => Navigator.pushNamed(context, 'profile-detail'),
+            child: _header(),
+          ),
           Expanded(
             child: SingleChildScrollView(
               child: _contentProfile(),

@@ -11,6 +11,7 @@ import 'package:first_proyect/src/features/presentation/filter_page/View/filter_
 import 'package:first_proyect/src/features/presentation/collections_page/View/collections_page.dart';
 import 'package:first_proyect/src/features/presentation/collection_detail_page/View/collection_detail_page.dart';
 import 'package:first_proyect/src/features/presentation/place_detail_page/View/place_detail_page.dart';
+import 'package:first_proyect/src/features/presentation/profile_detail_page/view/profile_detail_page.dart';
 
 final routes = <String, WidgetBuilder>{
   'welcome': (BuildContext context) => WelcomePage(),
@@ -23,4 +24,5 @@ final routes = <String, WidgetBuilder>{
   'collections': (BuildContext context) => CollectionsPage(),
   'collections-detail': (BuildContext context) => CollectionDetailPage(),
   'place-detail': (BuildContext context) => PlaceDetailPage(),
+  'profile-detail': (BuildContext context) => ProfileDetailPage(),
 };
