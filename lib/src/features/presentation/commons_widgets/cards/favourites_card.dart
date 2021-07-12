@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:first_proyect/src/colors/colors.dart';
 //COMMONS WIDGETS
 import 'package:first_proyect/src/features/presentation/commons_widgets/headers/header_text.dart';
+//Utils
+import 'package:first_proyect/src/utils/styles/box_decoration_shadows.dart';
 
 Widget favouritesCard({
   BuildContext context,
@@ -28,17 +30,7 @@ Widget favouritesCard({
     ),
     padding: EdgeInsets.only(left: 2, right: 2, top: 10, bottom: 10),
     width: double.infinity,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(10),
-      color: Colors.white,
-      boxShadow: [
-        BoxShadow(
-          color: Color.fromRGBO(210, 211, 215, 1.0),
-          offset: Offset(1, 5),
-          blurRadius: 10.0,
-        )
-      ],
-    ),
+    decoration: createBoxDecorationWithShadow(),
     child: Row(
       children: [
         ClipRRect(
@@ -94,16 +86,6 @@ Widget favouritesCard({
                       color: gris,
                       fontWeight: FontWeight.w500,
                       fontSize: 13.0),
-                  /*Container(
-                    margin: EdgeInsets.only(left: 25.0),
-                    width: 83.0,
-                    height: 18.0,
-                    child: createButton(
-                      buttonColor: orange,
-                      labelButton: buttonText,
-                      labelFontsize: 11.0,
-                    ),
-                  ),*/
                 ],
               )
             ],

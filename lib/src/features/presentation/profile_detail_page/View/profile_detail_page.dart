@@ -1,9 +1,12 @@
+import 'package:first_proyect/src/utils/styles/box_decoration_shadows.dart';
 import 'package:flutter/material.dart';
 //COLORS
 import 'package:first_proyect/src/colors/colors.dart';
 //COMPONENTS
 import 'package:first_proyect/src/features/presentation/commons_widgets/backButtons/back_button.dart';
 import 'package:first_proyect/src/features/presentation/commons_widgets/headers/header_text.dart';
+//Extensions
+import 'package:first_proyect/src/utils/extension/screen_size.dart';
 
 class ProfileDetailPage extends StatefulWidget {
   ProfileDetailPage({Key key}) : super(key: key);
@@ -15,8 +18,6 @@ class ProfileDetailPage extends StatefulWidget {
 class _ProfileDetailPageState extends State<ProfileDetailPage> {
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height * 0.6;
     return Scaffold(
       backgroundColor: bgGreyPage,
       appBar: AppBar(
@@ -50,10 +51,19 @@ class _ProfileDetailPageState extends State<ProfileDetailPage> {
             delegate: SliverChildListDelegate(
               [
                 Container(
-                  margin: EdgeInsets.only(top: 30, left: 15, right: 15),
-                  color: Colors.red,
-                  width: screenWidth,
-                  height: screenHeight,
+                  margin: EdgeInsets.only(
+                    top: screenHeight.getScreenHeight(
+                        context: context, multiplier: 0.3),
+                    left: 15,
+                    right: 15,
+                  ),
+                  decoration: createBoxDecorationWithShadow(),
+                  width: screenWidth.getScreenWidth(context: context),
+                  height: screenHeight.getScreenHeight(
+                      context: context, multiplier: 1),
+                  child: Column(
+                    children: [],
+                  ),
                 ),
               ],
             ),
