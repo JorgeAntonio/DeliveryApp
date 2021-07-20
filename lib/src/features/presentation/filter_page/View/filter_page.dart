@@ -9,7 +9,7 @@ import 'package:first_proyect/src/features/presentation/filter_page/View/compone
 import 'package:first_proyect/src/features/presentation/filter_page/View/components/price_filter.dart';
 
 class FilterPage extends StatefulWidget {
-  FilterPage({Key key}) : super(key: key);
+  FilterPage({Key? key}) : super(key: key);
 
   @override
   _FilterPageState createState() => _FilterPageState();
@@ -160,7 +160,7 @@ class _FilterPageState extends State<FilterPage> {
   }
 }
 
-Widget _appBar(BuildContext context) {
+PreferredSizeWidget? _appBar(BuildContext context) {
   return AppBar(
     elevation: 0.5,
     backgroundColor: Colors.white,

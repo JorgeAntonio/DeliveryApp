@@ -5,12 +5,12 @@ import 'package:first_proyect/src/colors/colors.dart';
 import 'package:first_proyect/src/features/presentation/commons_widgets/headers/header_text.dart';
 
 Widget cardVertical(
-    {BuildContext context,
-    double width,
-    double height,
-    ImageProvider<Object> image,
-    String title,
-    String subtitle}) {
+    {required BuildContext context,
+    required double width,
+    required double height,
+    required ImageProvider<Object> image,
+    required String title,
+    required String subtitle}) {
   return Container(
     margin: EdgeInsets.all(5.0),
     child: Column(

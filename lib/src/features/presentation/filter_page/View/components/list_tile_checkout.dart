@@ -8,9 +8,13 @@ import 'package:first_proyect/src/features/presentation/commons_widgets/headers/
 class ListTileCheck extends StatefulWidget {
   final String texto;
   final bool isActive;
-  final Function func;
+  final Function()? func;
 
-  ListTileCheck({Key key, this.texto, this.isActive, this.func})
+  ListTileCheck(
+      {Key? key,
+      required this.texto,
+      required this.isActive,
+      required this.func})
       : super(key: key);
 
   @override
@@ -33,7 +37,10 @@ class _ListTileCheckState extends State<ListTileCheck> {
 }
 
 Widget listTiles(
-    {BuildContext context, texto: String, isActive: bool, Function func}) {
+    {required BuildContext context,
+    texto: String,
+    isActive: bool,
+    Function()? func}) {
   return Container(
     decoration: BoxDecoration(
         border: Border(

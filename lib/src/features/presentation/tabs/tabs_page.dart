@@ -9,7 +9,7 @@ import 'package:first_proyect/src/features/presentation/tabs/my_order_tab/View/m
 import 'package:first_proyect/src/features/presentation/tabs/profile_tab/View/profile_tab.dart';
 
 class TabsPage extends StatefulWidget {
-  TabsPage({Key key}) : super(key: key);
+  TabsPage({Key? key}) : super(key: key);
 
   @override
   _TabsPageState createState() => _TabsPageState();
@@ -72,6 +72,7 @@ class _TabsPageState extends State<TabsPage> {
         'Activar Ubicación',
         'Por favor active su ubicación para mostrarle los restaurantes de su cercanía',
         createButton(
+            context: context,
             buttonColor: orange,
             labelButton: 'Activar Ubicación',
             func: () {}));

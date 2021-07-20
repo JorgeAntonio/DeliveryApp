@@ -7,18 +7,18 @@ import 'package:first_proyect/src/features/presentation/commons_widgets/headers/
 import 'package:first_proyect/src/utils/styles/box_decoration_shadows.dart';
 
 Widget favouritesCard({
-  BuildContext context,
+  required BuildContext context,
   double marginTop = 8.0,
   double marginRight = 0.0,
   double marginBotton = 8.0,
   double marginLeft = 0.0,
-  ImageProvider<Object> image,
-  String title,
-  String subtitle,
-  String review,
-  String ratings,
+  required ImageProvider<Object> image,
+  required String title,
+  required String subtitle,
+  required String review,
+  required String ratings,
   String buttonText = '',
-  bool hasActionButton,
+  required bool hasActionButton,
   bool isFavourite = true,
 }) {
   return Container(

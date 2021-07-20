@@ -11,7 +11,7 @@ const boxShadows = [
 Decoration createBoxDecorationWithShadow(
     {Color containerColor = Colors.white,
     List<BoxShadow> boxShadows = boxShadows,
-    BorderRadiusGeometry borderRadius}) {
+    BorderRadiusGeometry? borderRadius}) {
   return BoxDecoration(
     borderRadius: borderRadius,
     color: containerColor,

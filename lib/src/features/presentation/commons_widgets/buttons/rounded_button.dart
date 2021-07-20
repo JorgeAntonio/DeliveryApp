@@ -5,18 +5,18 @@ import 'package:flutter/material.dart';
 const shape = StadiumBorder();
 
 Widget createButton(
-    {BuildContext context,
+    {required BuildContext context,
     double width = 350.0,
     double height = 45.0,
     double radius = 20.0,
     bool isWithIcon = false,
-    ImageProvider<Object> icon,
+    ImageProvider<Object>? icon,
     Color labelButtonColor = Colors.white,
     double labelFontsize = 15.0,
-    Color buttonColor,
+    Color buttonColor = Colors.blue,
     OutlinedBorder shape = shape,
-    Function func,
-    String labelButton}) {
+    Function()? func,
+    required String labelButton}) {
   return Container(
     width: width,
     height: height,
@@ -31,13 +31,13 @@ Widget createButton(
 
 Widget _raisedButtonWithIcon(
     double radius,
-    ImageProvider<Object> icon,
+    ImageProvider<Object>? icon,
     String labelButton,
     Color labelButtonColor,
     double labelFontsize,
     Color color,
     OutlinedBorder shape,
-    Function func) {
+    Function()? func) {
   return ElevatedButton(
     onPressed: func,
     style: ElevatedButton.styleFrom(
@@ -49,7 +49,7 @@ Widget _raisedButtonWithIcon(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image(
-          image: icon,
+          image: icon ?? AssetImage('images/abouticon.png'),
           width: 20.0,
           height: 20.0,
         ),
@@ -74,7 +74,7 @@ Widget _raisedButtonNoIcon(
   double labelFontsize,
   Color color,
   OutlinedBorder shape,
-  Function func,
+  Function()? func,
 ) {
   return ElevatedButton(
     onPressed: func,

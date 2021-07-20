@@ -11,7 +11,7 @@ import 'package:first_proyect/src/features/presentation/commons_widgets/headers/
 import 'package:first_proyect/src/utils/extension/screen_size.dart';
 
 class ProfileDetailPage extends StatefulWidget {
-  ProfileDetailPage({Key key}) : super(key: key);
+  ProfileDetailPage({Key? key}) : super(key: key);
 
   @override
   _ProfileDetailPageState createState() => _ProfileDetailPageState();
@@ -54,16 +54,14 @@ class _ProfileDetailPageState extends State<ProfileDetailPage> {
               [
                 Container(
                   margin: EdgeInsets.only(
-                    top: screenHeight.getScreenHeight(
-                        context: context, multiplier: 0.3),
+                    top: getScreenHeight(context: context, multiplier: 0.3),
                     left: 15,
                     right: 15,
                   ),
                   decoration: createBoxDecorationWithShadow(
                       borderRadius: BorderRadius.circular(10)),
-                  width: screenWidth.getScreenWidth(context: context),
-                  height: screenHeight.getScreenHeight(
-                      context: context, multiplier: 1.65),
+                  width: getScreenWidth(context: context),
+                  height: getScreenHeight(context: context, multiplier: 1.65),
                   child: Column(
                     children: [
                       Transform.translate(
