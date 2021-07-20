@@ -1,3 +1,5 @@
+import 'package:first_proyect/src/features/presentation/profile_detail_page/View/components/avatar_view.dart';
+import 'package:first_proyect/src/features/presentation/profile_detail_page/View/components/textfields_view.dart';
 import 'package:first_proyect/src/utils/styles/box_decoration_shadows.dart';
 import 'package:flutter/material.dart';
 //COLORS
@@ -57,14 +59,25 @@ class _ProfileDetailPageState extends State<ProfileDetailPage> {
                     left: 15,
                     right: 15,
                   ),
-                  decoration: createBoxDecorationWithShadow(),
+                  decoration: createBoxDecorationWithShadow(
+                      borderRadius: BorderRadius.circular(10)),
                   width: screenWidth.getScreenWidth(context: context),
                   height: screenHeight.getScreenHeight(
-                      context: context, multiplier: 1),
+                      context: context, multiplier: 1.65),
                   child: Column(
-                    children: [],
+                    children: [
+                      Transform.translate(
+                        offset: Offset(0, -60),
+                        child: AvatarView(
+                          backgroundImage:
+                              'https://images.unsplash.com/photo-1520223297779-95bbd1ea79b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=966&q=80',
+                        ),
+                      ),
+                      TextFieldsProfileDetailsView(),
+                    ],
                   ),
                 ),
+                SizedBox(height: 50),
               ],
             ),
           )

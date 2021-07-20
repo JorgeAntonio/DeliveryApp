@@ -1,12 +1,43 @@
+import 'package:first_proyect/src/colors/colors.dart';
+import 'package:first_proyect/src/utils/styles/box_decoration_shadows.dart';
 import 'package:flutter/material.dart';
 
 class AvatarView extends StatelessWidget {
-  const AvatarView({Key key}) : super(key: key);
+  final String backgroundImage;
+
+  AvatarView({@required this.backgroundImage});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: null,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        Container(
+          width: 142,
+          height: 142,
+          decoration: createBoxDecorationWithShadow(
+              borderRadius: BorderRadius.circular(65)),
+          child: CircleAvatar(
+            backgroundImage: NetworkImage(backgroundImage),
+          ),
+        ),
+        Transform.translate(
+          offset: Offset(0, -35),
+          child: Container(
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              color: rosa,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Icon(
+              Icons.camera_alt,
+              color: white,
+              size: 20,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

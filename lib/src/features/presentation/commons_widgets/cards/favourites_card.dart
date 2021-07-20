@@ -30,7 +30,8 @@ Widget favouritesCard({
     ),
     padding: EdgeInsets.only(left: 2, right: 2, top: 10, bottom: 10),
     width: double.infinity,
-    decoration: createBoxDecorationWithShadow(),
+    decoration:
+        createBoxDecorationWithShadow(borderRadius: BorderRadius.circular(10)),
     child: Row(
       children: [
         ClipRRect(
