@@ -10,7 +10,7 @@ import 'package:first_proyect/src/features/presentation/commons_widgets/headers/
 import 'package:first_proyect/src/features/presentation/tabs/my_order_tab/View/components/empty_order_view.dart';
 
 class MyOrderTab extends StatefulWidget {
-  MyOrderTab({Key key}) : super(key: key);
+  MyOrderTab({Key? key}) : super(key: key);
 
   @override
   _MyOrderTabState createState() => _MyOrderTabState();
@@ -83,7 +83,7 @@ Widget _cardOrder(BuildContext context) {
     child: Column(
       children: [
         Row(
-          children: [_cardOrderTopContent()],
+          children: [_cardOrderTopContent(context)],
         ),
         Column(
           children: [
@@ -99,7 +99,7 @@ Widget _cardOrder(BuildContext context) {
   );
 }
 
-Widget _cardOrderTopContent() {
+Widget _cardOrderTopContent(BuildContext context) {
   return Container(
     padding: EdgeInsets.symmetric(vertical: 10),
     child: Column(
@@ -127,6 +127,7 @@ Widget _cardOrderTopContent() {
                   width: 110.0,
                   height: 20.0,
                   child: createButton(
+                    context: context,
                     labelButton: 'Delivery gratis',
                     buttonColor: orange,
                     labelFontsize: 11.0,
@@ -211,7 +212,7 @@ Widget _checkoutResume(context) {
 }
 
 Widget _itemsCheckOutResume(
-    {title: String, value: String, BuildContext context}) {
+    {title: String, value: String, required BuildContext context}) {
   return Container(
     decoration: BoxDecoration(
         border:

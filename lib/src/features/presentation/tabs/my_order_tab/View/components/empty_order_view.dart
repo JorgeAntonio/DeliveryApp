@@ -5,7 +5,7 @@ import 'package:first_proyect/src/colors/colors.dart';
 import 'package:first_proyect/src/features/presentation/commons_widgets/headers/header_text.dart';
 
 class EmptyOrderView extends StatelessWidget {
-  const EmptyOrderView({Key key}) : super(key: key);
+  const EmptyOrderView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

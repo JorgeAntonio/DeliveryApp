@@ -59,6 +59,7 @@ class CollectionDetailPage extends StatelessWidget {
                   Column(
                     children: [
                       favouritesCard(
+                        context: context,
                         image: NetworkImage(
                             'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
                         title: 'Andy & Cindy dinners',
@@ -70,6 +71,7 @@ class CollectionDetailPage extends StatelessWidget {
                         isFavourite: true,
                       ),
                       favouritesCard(
+                        context: context,
                         image: NetworkImage(
                             'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
                         title: 'Andy & Cindy dinners',
@@ -81,6 +83,7 @@ class CollectionDetailPage extends StatelessWidget {
                         isFavourite: false,
                       ),
                       favouritesCard(
+                        context: context,
                         image: NetworkImage(
                             'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
                         title: 'Andy & Cindy dinners',
@@ -92,6 +95,7 @@ class CollectionDetailPage extends StatelessWidget {
                         isFavourite: true,
                       ),
                       favouritesCard(
+                        context: context,
                         image: NetworkImage(
                             'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
                         title: 'Andy & Cindy dinners',
@@ -103,6 +107,7 @@ class CollectionDetailPage extends StatelessWidget {
                         isFavourite: false,
                       ),
                       favouritesCard(
+                        context: context,
                         image: NetworkImage(
                             'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
                         title: 'Andy & Cindy dinners',

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:first_proyect/src/colors/colors.dart';
 
 class CuisinesFilter extends StatefulWidget {
-  CuisinesFilter({Key key}) : super(key: key);
+  CuisinesFilter({Key? key}) : super(key: key);
 
   @override
   _CuisinesFilterState createState() => _CuisinesFilterState();
@@ -27,37 +27,37 @@ class _CuisinesFilterState extends State<CuisinesFilter> {
           direction: Axis.horizontal,
           alignment: WrapAlignment.start,
           children: [
-            _createButtonFilter(() {
+            _createButtonFilter(context, () {
               setState(() {
                 btnAmerican = !btnAmerican;
               });
             }, btnAmerican, 'American'),
-            _createButtonFilter(() {
+            _createButtonFilter(context, () {
               setState(() {
                 btnAsia = !btnAsia;
               });
             }, btnAsia, 'Asia'),
-            _createButtonFilter(() {
+            _createButtonFilter(context, () {
               setState(() {
                 btnSushi = !btnSushi;
               });
             }, btnSushi, 'Sushi'),
-            _createButtonFilter(() {
+            _createButtonFilter(context, () {
               setState(() {
                 btnPizza = !btnPizza;
               });
             }, btnPizza, 'Pizza'),
-            _createButtonFilter(() {
+            _createButtonFilter(context, () {
               setState(() {
                 btnFastFood = !btnFastFood;
               });
             }, btnFastFood, 'Fast food'),
-            _createButtonFilter(() {
+            _createButtonFilter(context, () {
               setState(() {
                 btnAsia = !btnAsia;
               });
             }, btnAsia, 'Asia'),
-            _createButtonFilter(() {
+            _createButtonFilter(context, () {
               setState(() {
                 btnDinner = !btnDinner;
               });
@@ -69,12 +69,14 @@ class _CuisinesFilterState extends State<CuisinesFilter> {
   }
 }
 
-Widget _createButtonFilter(Function func, bool isActive, String labelText) {
+Widget _createButtonFilter(
+    BuildContext context, Function()? func, bool isActive, String labelText) {
   return Container(
     width: 110,
     height: 50,
     margin: EdgeInsets.only(left: 2),
     child: createButton(
+      context: context,
       labelButton: labelText,
       labelButtonColor: isActive ? orange : gris,
       func: func,

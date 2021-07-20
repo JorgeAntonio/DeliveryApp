@@ -10,9 +10,10 @@ const boxShadows = [
 
 Decoration createBoxDecorationWithShadow(
     {Color containerColor = Colors.white,
-    List<BoxShadow> boxShadows = boxShadows}) {
+    List<BoxShadow> boxShadows = boxShadows,
+    BorderRadiusGeometry? borderRadius}) {
   return BoxDecoration(
-    borderRadius: BorderRadius.circular(10),
+    borderRadius: borderRadius,
     color: containerColor,
     boxShadow: boxShadows,
   );

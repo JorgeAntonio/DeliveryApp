@@ -6,8 +6,6 @@ import 'package:first_proyect/src/features/presentation/commons_widgets/headers/
 import 'package:first_proyect/src/features/presentation/commons_widgets/headers/header_text.dart';
 import 'package:first_proyect/src/features/presentation/commons_widgets/cards/vertical_card.dart';
 import 'package:first_proyect/src/features/presentation/commons_widgets/cards/populares_card.dart';
-//Swiper
-import 'package:flutter_swiper/flutter_swiper.dart';
 
 class SearchPage extends StatelessWidget {
   @override
@@ -46,6 +44,7 @@ class SearchPage extends StatelessWidget {
                       textHeader: 'Recomendado para ti', textAction: ''),
                   SizedBox(height: 20.0),
                   popularesCards(
+                      context: context,
                       image: NetworkImage(
                           'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1ab8be12159515.5625825345ad2.jpg'),
                       title: 'Andy & Cindy dinners',
@@ -54,6 +53,7 @@ class SearchPage extends StatelessWidget {
                       ratings: '(233 ratings)',
                       hasActionButton: false),
                   popularesCards(
+                      context: context,
                       image: NetworkImage(
                           'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1ab8be12159515.5625825345ad2.jpg'),
                       title: 'Andy & Cindy dinners',
@@ -62,6 +62,7 @@ class SearchPage extends StatelessWidget {
                       ratings: '(233 ratings)',
                       hasActionButton: false),
                   popularesCards(
+                      context: context,
                       image: NetworkImage(
                           'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1ab8be12159515.5625825345ad2.jpg'),
                       title: 'Andy & Cindy dinners',
@@ -103,22 +104,18 @@ Widget _sliderRecentSearch() {
   return Container(
     margin: EdgeInsets.only(top: 5.0),
     height: 190.0,
-    child: Swiper(
-        itemCount: 4,
-        layout: SwiperLayout.DEFAULT,
-        itemBuilder: (BuildContext context, int index) {
-          return ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (BuildContext context, int index) {
-                return cardVertical(
-                    context: context,
-                    width: 160.0,
-                    height: 120.0,
-                    title: "Andy & Cindy Dinner",
-                    subtitle: "Calle Las Camelias 38",
-                    image: NetworkImage(
-                        "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZHxlbnwwfDF8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'"));
-              });
-        }),
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
+      itemBuilder: (BuildContext context, int index) {
+        return cardVertical(
+            context: context,
+            width: 160.0,
+            height: 120.0,
+            title: "Andy & Cindy Dinner",
+            subtitle: "Calle Las Camelias 38",
+            image: NetworkImage(
+                "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZHxlbnwwfDF8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'"));
+      },
+    ),
   );
 }

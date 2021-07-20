@@ -52,12 +52,14 @@ class WelcomePage extends StatelessWidget {
               ),
             ),
             createButton(
+                context: context,
                 labelButton: 'Log In',
                 buttonColor: orange,
                 func: () {
                   Navigator.pushNamed(context, 'login');
                 }),
             createButton(
+                context: context,
                 labelButton: 'Ingresar con Facebook',
                 buttonColor: fbButtonColor,
                 isWithIcon: true,

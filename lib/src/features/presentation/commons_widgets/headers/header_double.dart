@@ -4,7 +4,11 @@ import 'package:first_proyect/src/features/presentation/commons_widgets/headers/
 //Colors
 import 'package:first_proyect/src/colors/colors.dart';
 
-Widget headerDoubleText({String textHeader, String textAction, Function func}) {
+Widget headerDoubleText({
+  required String textHeader,
+  required String textAction,
+  Function()? func,
+}) {
   return Container(
     child: Row(
       children: [

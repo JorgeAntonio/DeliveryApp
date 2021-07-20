@@ -3,13 +3,11 @@ import 'package:first_proyect/src/features/presentation/commons_widgets/cards/po
 import 'package:flutter/material.dart';
 //Colors
 import 'package:first_proyect/src/colors/colors.dart';
-//Swiper
-import 'package:flutter_swiper/flutter_swiper.dart';
 //COMMONS
 import 'package:first_proyect/src/features/presentation/commons_widgets/headers/header_text.dart';
 
 class ExploreTab extends StatelessWidget {
-  const ExploreTab({Key key}) : super(key: key);
+  const ExploreTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +30,7 @@ class ExploreTab extends StatelessWidget {
               _sliderCards(),
               _headers(context, 'Popular esta semana', 'Mostrar todo'),
               popularesCards(
+                  context: context,
                   image: NetworkImage(
                       'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
                   title: 'Andy & Cindy dinners',
@@ -41,6 +40,7 @@ class ExploreTab extends StatelessWidget {
                   buttonText: 'Delivery',
                   hasActionButton: true),
               popularesCards(
+                  context: context,
                   image: NetworkImage(
                       'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
                   title: 'Andy & Cindy dinners',
@@ -50,6 +50,7 @@ class ExploreTab extends StatelessWidget {
                   buttonText: 'Delivery',
                   hasActionButton: true),
               popularesCards(
+                  context: context,
                   image: NetworkImage(
                       'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzF8fHxlbnwwfHx8&w=1000&q=80'),
                   title: 'Andy & Cindy dinners',
@@ -126,15 +127,10 @@ Widget _sliderCards() {
   return Container(
     height: 335.0,
     margin: EdgeInsets.only(bottom: 10.0),
-    child: Swiper(
-      itemCount: 4,
-      layout: SwiperLayout.DEFAULT,
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index) {
-        return ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (BuildContext context, int index) {
-              return _tarjeta(context);
-            });
+        return _tarjeta(context);
       },
     ),
   );
@@ -206,6 +202,7 @@ Widget _tarjeta(BuildContext context) {
                       width: 80.0,
                       height: 18.0,
                       child: createButton(
+                        context: context,
                         buttonColor: orange,
                         labelButton: 'Delyvery',
                         labelFontsize: 11.0,
@@ -250,15 +247,10 @@ Widget _headers(BuildContext context, String textHeader, String textAction) {
 Widget _sliderCollections() {
   return Container(
     height: 200.0,
-    child: Swiper(
-      itemCount: 4,
-      layout: SwiperLayout.DEFAULT,
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index) {
-        return ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (BuildContext context, int index) {
-              return _tarjetaCollection(context);
-            });
+        return _tarjetaCollection(context);
       },
     ),
   );

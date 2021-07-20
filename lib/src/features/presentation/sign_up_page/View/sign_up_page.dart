@@ -38,6 +38,7 @@ class SignUpPage extends StatelessWidget {
                 _dateOfBirthInput(context),
                 _passwordInput(context),
                 createButton(
+                    context: context,
                     buttonColor: orange,
                     labelButton: 'Registrarse',
                     func: () {}),

@@ -4,18 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:first_proyect/src/colors/colors.dart';
 
 Widget popularesCards({
-  BuildContext context,
+  required BuildContext context,
   double marginTop = 0.0,
   double marginRight = 0.0,
   double marginBotton = 0.0,
   double marginLeft = 3.0,
-  ImageProvider<Object> image,
-  String title,
-  String subtitle,
-  String review,
-  String ratings,
+  required ImageProvider<Object> image,
+  required String title,
+  required String subtitle,
+  required String review,
+  required String ratings,
   String buttonText = '',
-  bool hasActionButton,
+  required bool hasActionButton,
 }) {
   return Column(
     children: [
@@ -98,6 +98,7 @@ Widget popularesCards({
                           height: 18.0,
                           child: hasActionButton
                               ? createButton(
+                                  context: context,
                                   buttonColor: orange,
                                   labelButton: buttonText,
                                   labelFontsize: 11.0)

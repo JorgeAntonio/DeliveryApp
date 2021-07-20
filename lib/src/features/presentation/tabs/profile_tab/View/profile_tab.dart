@@ -5,7 +5,7 @@ import 'package:first_proyect/src/colors/colors.dart';
 import 'package:first_proyect/src/features/presentation/commons_widgets/headers/header_text.dart';
 
 class ProfileTab extends StatefulWidget {
-  ProfileTab({Key key}) : super(key: key);
+  ProfileTab({Key? key}) : super(key: key);
 
   @override
   _ProfileTabState createState() => _ProfileTabState();
