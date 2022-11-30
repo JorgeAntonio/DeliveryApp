@@ -1,6 +1,3 @@
-//Colors
-import 'dart:ui';
-
 import 'package:first_proyect/src/colors/colors.dart';
 //widgets
 import 'package:first_proyect/src/features/presentation/commons_widgets/backButtons/back_button.dart';

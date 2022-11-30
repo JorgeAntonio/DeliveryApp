@@ -4,7 +4,7 @@ import 'package:first_proyect/src/colors/colors.dart';
 //COMMONS WIDGETS
 import 'package:first_proyect/src/features/presentation/commons_widgets/headers/header_text.dart';
 
-@immutable
+//@immutable
 class ListTileCheck extends StatefulWidget {
   final String texto;
   final bool isActive;
